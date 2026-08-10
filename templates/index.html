@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My App</title>
+</head>
+
+<body>
+
+    <h1>My First Full Stack App</h1>
+
+    <button onclick="getMessage()">Click Me</button>
+
+    <p id="result"></p>
+
+    <script>
+        function getMessage() {
+            fetch("/hello")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("result").innerText = data;
+                });
+        }
+    </script>
+
+</body>
+</html>
