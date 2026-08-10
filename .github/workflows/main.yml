@@ -17,4 +17,4 @@ jobs:
    - name: build progress
      uses: actions/checkout@v4
    - name: final build
-     run: docker build -t "flask_app"   
+     run: docker build -t flask_app   
