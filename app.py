@@ -1,8 +1,13 @@
-def add(a, b):
-    return a + b
+from flask import Flask, render_template
 
-def multiply(a, b):
-    return a * b
+app = Flask(__name__)
 
-if __name__ == "__main__":
-    print("3 + 3 =", add(2, 3))
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+@app.route("/hello")
+def hello():
+    return "Hello from Python Backend!"
+
+app.run(debug=True)
