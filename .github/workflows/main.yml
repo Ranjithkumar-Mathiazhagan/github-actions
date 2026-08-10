@@ -2,7 +2,8 @@ name : docker-build
 on: [push]
 jobs: 
  install-flask:
- key: ${{ runner.os}}-pip-${{ hashfiles('**/requirements.txt')}}
+  key: ${{ runner.os}}-pip-${{ hashfiles('**/requirements.txt')}}
+  
   runs-on: ubuntu-latest
   
   steps:
@@ -18,4 +19,4 @@ jobs:
    - name: build progress
      uses: actions/checkout@v4
    - name: final build
-     run: docker build -t flask_app .
+     run: docker build -t "flask_app"   
