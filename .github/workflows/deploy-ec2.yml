@@ -40,4 +40,4 @@ jobs:
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/flask_app:${{ needs.build-and-push.outputs.image_tag }}
             docker stop flask_app || true
             docker rm flask_app || true
-            docker run -d --name flask_app -p 5000:5000 ${{ secrets.DOCKERHUB_USERNAME }}/flask_app:${{ needs.build-and-push.outputs.image_tag }}
+            docker run -d --name flask_app -p 5001:5001 ${{ secrets.DOCKERHUB_USERNAME }}/flask_app:${{ needs.build-and-push.outputs.image_tag }}
