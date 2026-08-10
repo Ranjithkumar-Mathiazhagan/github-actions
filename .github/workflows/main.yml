@@ -2,6 +2,7 @@ name : docker-build
 on: [push]
 jobs: 
  install-flask:
+ key: ${{ runner.os}}-pip-${{ hashfiles('**/requirements.txt')}}
   runs-on: ubuntu-latest
   
   steps:
