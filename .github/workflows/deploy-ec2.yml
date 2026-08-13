@@ -1,7 +1,11 @@
 name: Build and Deploy to EC2
 
-on: [push]
-
+on:
+ branches:
+   pull_request :
+    branches : [main]
+   push :
+    branches : [main
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
