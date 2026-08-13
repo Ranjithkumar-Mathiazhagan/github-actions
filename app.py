@@ -8,6 +8,6 @@ def home():
 
 @app.route("/hello")
 def hello():
-    return "Hello from Python Backend!"
+    return "Hello from Python Backend with postgresql!"
 
 app.run(host="0.0.0.0", port=5001, debug=True)
